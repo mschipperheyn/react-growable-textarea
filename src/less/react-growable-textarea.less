@@ -1,0 +1,59 @@
+.react-msa-growable-textarea{
+
+	position: relative;
+	border: 1px solid #BDC7D8;
+	background: #fff;
+
+	textarea, 
+	pre {
+	
+		padding: 3px !important;
+		font: 400 13px/16px helvetica, arial, sans-serif;
+  
+		margin: 0;
+		padding: 0;
+		outline: 0;
+		border: 0;
+		
+		background: transparent;
+		/* Make the text soft-wrap */
+		white-space: pre-wrap;
+		word-wrap: break-word;
+	}
+	
+	textarea{
+	  /* The border-box box model is used to allow
+	   * padding whilst still keeping the overall width
+	   * at exactly that of the containing element.
+	   */
+	  -webkit-box-sizing: border-box;
+		 -moz-box-sizing: border-box;
+		  -ms-box-sizing: border-box;
+			  box-sizing: border-box;
+	  width: 100%;
+	  /* This height is used when JS is disabled */
+	  height: 60px;	
+	}
+	
+	pre{
+		display:none;
+	}
+	
+	&.active{
+		textarea{
+		  /* Hide any scrollbars */
+		  overflow: hidden;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  /* Remove WebKit user-resize widget */
+		  resize: none;		
+		}
+		
+		pre{
+			display: block;
+			/* Hide the text; just using it for sizing */
+			visibility: hidden;		
+		}
+	}
+}

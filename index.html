@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<!--link src="dist/react-growable-textarea.css" type="style/css"/-->
+    <script src="node_modules/react/dist/react.js"></script>
+    <script src="node_modules/react/dist/JSXTransformer.js"></script>
+	<script src="dist/react-growable-textarea.js"></script>
+  </head>
+  <body>
+  	<h1>React Growable Textarea</h1>
+  	<h2>&lt;GrowableTextarea name="myFormEl"/&gt;</h2>
+    <div id="example"></div>
+    <hr/>
+    <h2>&lt;GrowableTextarea name="myFormEl" value="Some initial text"/&gt;</h2>
+    <div id="example2"></div>
+    <hr/>
+    <h2>&lt;GrowableTextarea name="myFormEl"" maxHeight={175} value="Initial text larger than max height\na\na\na\na\na\na\na\na\na\na\n"/&gt;</h2>
+    <div id="example3"></div>
+    <hr/>
+    <h2>&lt;GrowableTextarea name="myFormEl" maxHeight={125} placeholder="max height:125px"/&gt;</h2>
+    <div id="example4"></div>
+    <hr/>
+    <h2>&lt;GrowableTextarea name="myFormEl" minHeight={125} placeholder="min height:125px"/&gt;</h2>
+    <div id="example5"></div>
+    <hr/>
+    <h2>&lt;GrowableTextarea name="myFormEl" minHeight={125} maxHeight={175} placeholder="min height:125px;max height=175"/&gt;</h2>
+    <div id="example6"></div>
+    <script type="text/jsx">
+      React.render(
+        <GrowableTextarea name="myFormEl"/>,
+        document.getElementById('example')
+      );
+    </script>
+
+    <script type="text/jsx">
+      React.render(
+        <GrowableTextarea name="myFormEl" value="Some initial text"/>,
+        document.getElementById('example2')
+      );
+    </script>
+    
+    <script type="text/jsx">
+      React.render(
+        <GrowableTextarea name="myFormEl" maxHeight={125} placeholder="max height:125px"/>,
+        document.getElementById('example4')
+      );
+    </script>
+    
+    <script type="text/jsx">
+      React.render(
+        <GrowableTextarea name="myFormEl" minHeight={125} placeholder="min height:125px"/>,
+        document.getElementById('example5')
+      );
+    </script>
+    
+    <script type="text/jsx">
+      React.render(
+        <GrowableTextarea name="myFormEl" minHeight={125} maxHeight={175} placeholder="min height:125px;max height=175"/>,
+        document.getElementById('example6')
+      );
+    </script>
+    
+    
+    <script type="text/jsx">
+      React.render(
+        <GrowableTextarea name="myFormEl" maxHeight={175} value="Initial text larger than max height\na\na\na\na\na\na\na\na\na\na\n"/>,
+        document.getElementById('example3')
+      );
+    </script>
+  </body>
+</html>
